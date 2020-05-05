@@ -15,6 +15,8 @@ else:
 ##################################################################################### get reference to objects in simulator
 errorCode, cameraHandle = sim.simxGetObjectHandle(clientID, 'Vision_sensor', sim.simx_opmode_oneshot_wait) # for camera
 sim.simxGetVisionSensorImage(clientID, cameraHandle, 0, sim.simx_opmode_streaming) # start image streaming from camera sensor
+errorCode, leftMotorHandle = sim.simxGetObjectHandle(clientID,'dr20_leftWheelJoint_',sim.simx_opmode_oneshot_wait)
+errorCode, rightMotorHandle = sim.simxGetObjectHandle(clientID,'dr20_rightWheelJoint_',sim.simx_opmode_oneshot_wait)
   
 while True: 
     returnCode, resolution, image = sim.simxGetVisionSensorImage(clientID, cameraHandle, 0, sim.simx_opmode_buffer)
@@ -27,4 +29,6 @@ while True:
         cv2.waitKey(1)
     elif returnCode == sim.simx_return_novalue_flag:
         print ('no image yet')
-        pass    
+        pass
+    errorCode=sim.simxSetJointTargetVelocity(clientID,leftMotorHandle,5, sim.simx_opmode_oneshot)
+    errorCode=sim.simxSetJointTargetVelocity(clientID,rightMotorHandle,4.8, sim.simx_opmode_oneshot)
