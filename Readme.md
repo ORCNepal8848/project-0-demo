@@ -7,9 +7,9 @@
 These two packages are required to display image data retrieved from simulator
 
 # Steps to access simulator api in python(for windows):
-1. Copy the following files to your working directory from 
-	C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu\programming\remoteApiBindings\python\python
-	C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu\programming\remoteApiBindings\lib\lib\Windows
+1. Copy the following files to your working directory from&nbsp;
+	C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu\programming\remoteApiBindings\python\python&nbsp;
+	C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu\programming\remoteApiBindings\lib\lib\Windows&nbsp;
 	* sim.py
 	* simConst.py
 	* remoteApi.dll
