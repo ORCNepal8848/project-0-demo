@@ -7,9 +7,9 @@
 These two packages are required to display image data retrieved from simulator
 
 # Steps to access simulator api in python(for windows):
-1. Copy the following files to your working directory from&nbsp;
-	C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu\programming\remoteApiBindings\python\python&nbsp;
-	C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu\programming\remoteApiBindings\lib\lib\Windows&nbsp;
+1. Copy the following files to your working directory from<br/>
+	C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu\programming\remoteApiBindings\python\python<br/>
+	C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu\programming\remoteApiBindings\lib\lib\Windows<br/>
 	* sim.py
 	* simConst.py
 	* remoteApi.dll
@@ -17,11 +17,11 @@ These two packages are required to display image data retrieved from simulator
 2. Open given Demo.tt file
 
 3. Copy/paste the following code to the script section of d420 bot in the Scene hierarchy
-```lua
-function sysCall_init() 
-	simRemoteApi.start(19999)
-end
-```
+	```lua
+	function sysCall_init() 
+		simRemoteApi.start(19999)
+	end
+	```
 
 4. Press Start/Resume Simulation in the simulator
 5. Run Demo.py
